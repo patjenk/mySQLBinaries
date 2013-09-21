@@ -1,0 +1,219 @@
+130921 01:05:11 mysqld_safe Starting mysqld daemon with databases from /usr/local/mysql/percona-xtradb-bin/data
+130921  1:05:11 [Note] Plugin 'FEDERATED' is disabled.
+130921  1:05:11 InnoDB: The InnoDB memory heap is disabled
+130921  1:05:11 InnoDB: Mutexes and rw_locks use GCC atomic builtins
+130921  1:05:11 InnoDB: Compressed tables use zlib 1.2.3
+130921  1:05:11 InnoDB: Using Linux native AIO
+130921  1:05:11 InnoDB: Initializing buffer pool, size = 128.0M
+130921  1:05:11 InnoDB: Completed initialization of buffer pool
+InnoDB: The first specified data file ./ibdata1 did not exist:
+InnoDB: a new database to be created!
+130921  1:05:11  InnoDB: Setting file ./ibdata1 size to 10 MB
+InnoDB: Database physically writes the file full: wait...
+130921  1:05:11  InnoDB: Log file ./ib_logfile0 did not exist: new to be created
+InnoDB: Setting log file ./ib_logfile0 size to 5 MB
+InnoDB: Database physically writes the file full: wait...
+130921  1:05:11  InnoDB: Log file ./ib_logfile1 did not exist: new to be created
+InnoDB: Setting log file ./ib_logfile1 size to 5 MB
+InnoDB: Database physically writes the file full: wait...
+InnoDB: Doublewrite buffer not found: creating new
+InnoDB: Doublewrite buffer created
+InnoDB: 127 rollback segment(s) active.
+InnoDB: Creating foreign key constraint system tables
+InnoDB: Foreign key constraint system tables created
+130921  1:05:12  InnoDB: Waiting for the background threads to start
+130921  1:05:13 Percona XtraDB (http://www.percona.com) 1.1.8-29.0 started; log sequence number 0
+130921  1:05:13 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+130921  1:05:13 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+130921  1:05:13 [Note] Server socket created on IP: '0.0.0.0'.
+130921  1:05:13 [Note] Event Scheduler: Loaded 0 events
+130921  1:05:13 [Note] /usr/local/mysql/percona-xtradb-bin/bin/mysqld: ready for connections.
+Version: '5.5.28'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
+
+Status information:
+
+Current dir: /usr/local/mysql/percona-xtradb-bin/data/
+Running threads: 0  Stack size: 262144
+Current locks:
+lock: 0x361ea90:
+
+lock: 0x35e2160:
+
+lock: 0x35d7490:
+
+lock: 0x35ca870:
+
+lock: 0x35b6dd0:
+
+lock: 0x35b3030:
+
+lock: 0x35ad190:
+
+lock: 0x35a6c30:
+
+lock: 0x2ced250:
+
+lock: 0x109d940:
+
+lock: 0x109df60:
+
+lock: 0x109e040:
+
+lock: 0x109e120:
+
+lock: 0x109da20:
+
+lock: 0x109db00:
+
+lock: 0x109d860:
+
+lock: 0x109d6a0:
+
+lock: 0x109d780:
+
+lock: 0x109e200:
+
+lock: 0x109dbe0:
+
+lock: 0x109de80:
+
+lock: 0x109dda0:
+
+lock: 0x109dcc0:
+
+lock: 0x109d400:
+
+lock: 0x109d4e0:
+
+lock: 0x109d5c0:
+
+
+Key caches:
+default
+Buffer_size:       8388608
+Block_size:           1024
+Division_limit:        100
+Age_limit:             300
+blocks used:             4
+not flushed:             0
+w_requests:             12
+writes:                  5
+r_requests:             13
+reads:                   4
+
+
+handler status:
+read_key:            1
+read_next:           0
+read_rnd             0
+read_first:          5
+write:               1
+delete               4
+update:              1
+
+Table status:
+Opened tables:         33
+Open tables:           26
+Open files:            18
+Open streams:           0
+
+Alarm status:
+Active alarms:   0
+Max used alarms: 0
+Next alarm time: 0
+
+Memory status:
+Non-mmapped space allocated from system: 10465280
+Number of free chunks:			 28
+Number of fastbin blocks:		 0
+Number of mmapped regions:		 14
+Space in mmapped regions:		 23986176
+Maximum total allocated space:		 0
+Space available in freed fastbin blocks: 0
+Total allocated space:			 9844400
+Total free space:			 620880
+Top-most, releasable space:		 572512
+Estimated memory (with thread stack):    34451456
+
+
+
+Events status:
+LLA = Last Locked At  LUA = Last Unlocked At
+WOC = Waiting On Condition  DL = Data Locked
+
+Event scheduler status:
+State      : INITIALIZED
+Thread id  : 0
+LLA        : n/a:0
+LUA        : n/a:0
+WOC        : NO
+Workers    : 0
+Executed   : 0
+Data locked: NO
+
+Event queue status:
+Element count   : 0
+Data locked     : NO
+Attempting lock : NO
+LLA             : init_queue:139
+LUA             : init_queue:149
+WOC             : NO
+Next activation : never
+130921  1:23:56 [Note] /usr/local/mysql/percona-xtradb-bin/bin/mysqld: Normal shutdown
+
+130921  1:23:56 [Note] Event Scheduler: Purging the queue. 0 events
+130921  1:23:56  InnoDB: Starting shutdown...
+130921  1:23:58  InnoDB: Shutdown completed; log sequence number 1603442
+130921  1:23:58 [Note] /usr/local/mysql/percona-xtradb-bin/bin/mysqld: Shutdown complete
+
+130921 01:23:58 mysqld_safe mysqld from pid file /usr/local/mysql/percona-xtradb-bin/data/development-rs-00004.pid ended
+130921 01:24:42 mysqld_safe Starting mysqld daemon with databases from /usr/local/mysql/percona-xtradb-bin/data
+130921  1:24:42 [Note] Plugin 'FEDERATED' is disabled.
+130921  1:24:42 InnoDB: The InnoDB memory heap is disabled
+130921  1:24:42 InnoDB: Mutexes and rw_locks use GCC atomic builtins
+130921  1:24:42 InnoDB: Compressed tables use zlib 1.2.3
+130921  1:24:42 InnoDB: Using Linux native AIO
+130921  1:24:42 InnoDB: Initializing buffer pool, size = 128.0M
+130921  1:24:42 InnoDB: Completed initialization of buffer pool
+130921  1:24:42 InnoDB: highest supported file format is Barracuda.
+130921  1:24:42  InnoDB: Waiting for the background threads to start
+130921  1:24:43 Percona XtraDB (http://www.percona.com) 1.1.8-29.0 started; log sequence number 1603442
+130921  1:24:43 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+130921  1:24:43 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+130921  1:24:43 [Note] Server socket created on IP: '0.0.0.0'.
+130921  1:24:43 [Note] Event Scheduler: Loaded 0 events
+130921  1:24:43 [Note] /usr/local/mysql/percona-xtradb-bin/bin/mysqld: ready for connections.
+Version: '5.5.28'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
+130921  1:24:47 [Note] /usr/local/mysql/percona-xtradb-bin/bin/mysqld: Normal shutdown
+
+130921  1:24:47 [Note] Event Scheduler: Purging the queue. 0 events
+130921  1:24:47  InnoDB: Starting shutdown...
+130921  1:24:48  InnoDB: Shutdown completed; log sequence number 1603442
+130921  1:24:48 [Note] /usr/local/mysql/percona-xtradb-bin/bin/mysqld: Shutdown complete
+
+130921 01:24:48 mysqld_safe mysqld from pid file /usr/local/mysql/percona-xtradb-bin/data/development-rs-00004.pid ended
+130921 01:44:33 mysqld_safe Starting mysqld daemon with databases from /usr/local/mysql/percona-xtradb-bin/data
+130921  1:44:33 [Note] Plugin 'FEDERATED' is disabled.
+130921  1:44:33 InnoDB: The InnoDB memory heap is disabled
+130921  1:44:33 InnoDB: Mutexes and rw_locks use GCC atomic builtins
+130921  1:44:33 InnoDB: Compressed tables use zlib 1.2.3
+130921  1:44:33 InnoDB: Using Linux native AIO
+130921  1:44:33 InnoDB: Initializing buffer pool, size = 128.0M
+130921  1:44:33 InnoDB: Completed initialization of buffer pool
+130921  1:44:33 InnoDB: highest supported file format is Barracuda.
+130921  1:44:33  InnoDB: Waiting for the background threads to start
+130921  1:44:34 Percona XtraDB (http://www.percona.com) 1.1.8-29.0 started; log sequence number 1603442
+130921  1:44:34 [Note] Server hostname (bind-address): '0.0.0.0'; port: 3306
+130921  1:44:34 [Note]   - '0.0.0.0' resolves to '0.0.0.0';
+130921  1:44:34 [Note] Server socket created on IP: '0.0.0.0'.
+130921  1:44:34 [Note] Event Scheduler: Loaded 0 events
+130921  1:44:34 [Note] /usr/local/mysql/percona-xtradb-bin/bin/mysqld: ready for connections.
+Version: '5.5.28'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
+130921  1:48:29 [Note] /usr/local/mysql/percona-xtradb-bin/bin/mysqld: Normal shutdown
+
+130921  1:48:29 [Note] Event Scheduler: Purging the queue. 0 events
+130921  1:48:29  InnoDB: Starting shutdown...
+130921  1:48:33  InnoDB: Shutdown completed; log sequence number 1603442
+130921  1:48:33 [Note] /usr/local/mysql/percona-xtradb-bin/bin/mysqld: Shutdown complete
+
+130921 01:48:33 mysqld_safe mysqld from pid file /usr/local/mysql/percona-xtradb-bin/data/development-rs-00004.pid ended
