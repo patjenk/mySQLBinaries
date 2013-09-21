@@ -1,4 +1,4 @@
-from .. import MyIsamFormatFile, MYSQL_FIELD_TYPES
+from ..myIsamFormatFile import MyIsamFormatFile, MYSQL_FIELD_TYPES
 from unittest import TestCase
 
 
@@ -24,6 +24,5 @@ class TestsReadMyIsamFormatFile(TestCase):
         expected_column_types = [MYSQL_FIELD_TYPES.MYSQL_TYPE_LONG, MYSQL_FIELD_TYPES.MYSQL_TYPE_VARCHAR, MYSQL_FIELD_TYPES.MYSQL_TYPE_VARCHAR, MYSQL_FIELD_TYPES.MYSQL_TYPE_VARCHAR, MYSQL_FIELD_TYPES.MYSQL_TYPE_VARCHAR]
         self.assertEqual(len(expected_column_types), len(format_file.column_types))
         for column_number, expected_column_type in enumerate(expected_column_types):
-            print MYSQL_FIELD_TYPES.reverse_mapping[expected_column_type], format_file.column_types[column_number]
             self.assertEqual(MYSQL_FIELD_TYPES.reverse_mapping[expected_column_type], format_file.column_types[column_number])
         self.assertEqual([8, 8, 8, 8, 8], format_file.column_character_sets)
