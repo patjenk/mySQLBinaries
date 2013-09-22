@@ -1,4 +1,5 @@
-from ..myIsamFormatFile import MyIsamFormatFile, MYSQL_FIELD_TYPES
+from ..myIsamFormatFile import MyIsamFormatFile
+from ..types import MYSQL_FIELD_TYPES
 from unittest import TestCase
 
 

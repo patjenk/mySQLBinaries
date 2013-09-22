@@ -28,3 +28,33 @@ MYSQL_FIELD_TYPES = enum('MYSQL_TYPE_DECIMAL', 'MYSQL_TYPE_TINY',
                         MYSQL_TYPE_VAR_STRING=253,
                         MYSQL_TYPE_STRING=254,
                         MYSQL_TYPE_GEOMETRY=255)
+
+
+# this one i made up
+MYISAM_DATA_FILE_FORMATS = enum('MYISAM_FIXED', 'MYISAM_DYNAMIC', 'MYISAM_PACKED', 'MYISAM_BLOB')
+
+# optionbits for database, Defined in include/my_base.h
+HA_OPTION_PACK_RECORD           = 1
+HA_OPTION_PACK_KEYS             = 2
+HA_OPTION_COMPRESS_RECORD       = 4
+HA_OPTION_LONG_BLOB_PTR         = 8 # new ISAM format */
+HA_OPTION_TMP_TABLE             = 16
+HA_OPTION_CHECKSUM              = 32
+HA_OPTION_DELAY_KEY_WRITE       = 64
+HA_OPTION_NO_PACK_KEYS          = 128 # Reserved for MySQL */
+HA_OPTION_CREATE_FROM_ENGINE    = 256
+HA_OPTION_RELIES_ON_SQL_LAYER   = 512
+HA_OPTION_NULL_FIELDS           = 1024
+HA_OPTION_PAGE_CHECKSUM         = 2048
+HA_OPTION_TEMP_COMPRESS_RECORD  = 16384 # set by isamchk */
+HA_OPTION_READ_ONLY_DATA        = 32768 # Set by isamchk */
+
+# Bits in flag to create(), Defined in include/my_base.h
+HA_DONT_TOUCH_DATA      = 1       # Don't empty datafile (isamchk) */
+HA_PACK_RECORD          = 2       # Request packed record format */
+HA_CREATE_TMP_TABLE     = 4
+HA_CREATE_CHECKSUM      = 8
+HA_CREATE_KEEP_FILES    = 16      # don't overwrite .MYD and MYI */
+HA_CREATE_PAGE_CHECKSUM = 32
+HA_CREATE_DELAY_KEY_WRITE = 64
+HA_CREATE_RELIES_ON_SQL_LAYER = 128

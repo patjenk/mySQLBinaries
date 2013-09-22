@@ -1,9 +1,10 @@
-from .types import MYSQL_FIELD_TYPES
+from .types import HA_OPTION_COMPRESS_RECORD, HA_OPTION_PACK_RECORD, MYISAM_DATA_FILE_FORMATS, MYSQL_FIELD_TYPES
 from struct import unpack
 
 
 class MyIsamFormatFileException(Exception):
     pass
+
 
 class MyIsamFormatFile:
     """
@@ -29,6 +30,19 @@ class MyIsamFormatFile:
         """
         Pull information out of the header of the format file.
         """
+
+        # Determining row format, does this look unintuitive? Well, it seem unintuitive.
+        # TODO: This isn't completely done. The options is really two bytes but idk how to really do bitwise operations on them so im only looking at the first byte. This might not even be the right byte to read.
+        self.file_handler.seek(30)
+        self.packed_options = ord(self.file_handler.read(1))
+        self.row_format = None
+        if (self.packed_options & HA_OPTION_COMPRESS_RECORD):
+            self.row_format = MYISAM_DATA_FILE_FORMATS.MYISAM_PACKED
+        elif (self.packed_options & HA_OPTION_PACK_RECORD):
+            self.row_format = MYISAM_DATA_FILE_FORMATS.MYISAM_DYNAMIC
+        else:
+            self.row_format = MYISAM_DATA_FILE_FORMATS.MYISAM_FIXED
+
         self.file_handler.seek(0)
         header_string = self.file_handler.read(62)
         self.frm_ver = header_string[3]
