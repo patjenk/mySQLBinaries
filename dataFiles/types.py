@@ -58,3 +58,21 @@ HA_CREATE_KEEP_FILES    = 16      # don't overwrite .MYD and MYI */
 HA_CREATE_PAGE_CHECKSUM = 32
 HA_CREATE_DELAY_KEY_WRITE = 64
 HA_CREATE_RELIES_ON_SQL_LAYER = 128
+
+# Documented at http://dev.mysql.com/doc/internals/en/layout-record-storage-frame.html
+MYISAM_DATA_FILE_BLOCK_TYPES = enum(
+            'DELETED_BLOCK',
+            'FULL_SMALL_RECORD_WITH_FULL_BLOCK',
+            'FULL_BIG_RECORD_WITH_FULL_BLOCK',
+            'FULL_SMALL_RECORD_WITH_UNUSED_SPACE',
+            'FULL_BIG_RECORD_WITH_UNUSED_SPACE',
+            'START_SMALL_RECORD',
+            'START_BIG_RECORD',
+            'END_SMALL_RECORD_WITH_FULL_BLOCK',
+            'END_BIG_RECORD_WITH_FULL_BLOCK',
+            'END_SMALL_RECORD_WITH_UNUSED_SPACE',
+            'END_BIG_RECORD_WITH_UNUSED_SPACE',
+            'CONTINUE_SMALL_RECORD',
+            'CONTINUE_BIG_RECORD',
+            'START_GIANT_RECORD',
+        )

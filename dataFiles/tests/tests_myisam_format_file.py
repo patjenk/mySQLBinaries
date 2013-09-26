@@ -1,5 +1,5 @@
 from ..myIsamFormatFile import MyIsamFormatFile
-from ..types import MYSQL_FIELD_TYPES
+from ..types import MYISAM_DATA_FILE_FORMATS, MYSQL_FIELD_TYPES
 from unittest import TestCase
 
 
@@ -10,6 +10,8 @@ class TestsReadMyIsamFormatFile(TestCase):
     def test_parse_header(self):
         format_file = MyIsamFormatFile("dataFiles/tests/examples/readme/myisam_table_one.frm")
         format_file.parse_header()
+        self.assertEqual(format_file.row_format, MYISAM_DATA_FILE_FORMATS.MYISAM_DYNAMIC)
+
         self.assertEqual(format_file.frm_ver, '\x09')
         self.assertEqual(format_file.legacy_db_type, '\x03')
         self.assertEqual(format_file.iosize, '\x00\x10')
