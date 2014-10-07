@@ -9,7 +9,7 @@ class TestsReadMyIsamIndexFile(TestCase):
         And that index file is valid
         Then we will not raise an exception.
         """
-        MyIsamIndexFile("dataFiles/tests/examples/readme/myisam_table_one.MYI")
+        MyIsamIndexFile("dataFiles/tests/examples/test_basics/myisam_table_one.MYI")
 
     def test_parse_header(self):
         """
@@ -19,7 +19,7 @@ class TestsReadMyIsamIndexFile(TestCase):
 
         Note: This test uses a cooked up myisam index file that we assume to be correct.
         """
-        index_file = MyIsamIndexFile("dataFiles/tests/examples/readme/myisam_table_one.MYI")
+        index_file = MyIsamIndexFile("dataFiles/tests/examples/test_basics/myisam_table_one.MYI")
         index_file.parse_header()
         self.assertEqual(0, index_file.header_state['keys'])
         self.assertEqual(0, index_file.header_state['full_text_keys'])

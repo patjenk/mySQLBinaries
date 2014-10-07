@@ -5,10 +5,10 @@ from unittest import TestCase
 
 class TestsReadMyIsamFormatFile(TestCase):
     def test_verify(self):
-        MyIsamFormatFile("dataFiles/tests/examples/readme/myisam_table_one.frm")
+        MyIsamFormatFile("dataFiles/tests/examples/test_basics/myisam_table_one.frm")
 
     def test_parse_header(self):
-        format_file = MyIsamFormatFile("dataFiles/tests/examples/readme/myisam_table_one.frm")
+        format_file = MyIsamFormatFile("dataFiles/tests/examples/test_basics/myisam_table_one.frm")
         format_file.parse_header()
         self.assertEqual(format_file.row_format, MYISAM_DATA_FILE_FORMATS.MYISAM_DYNAMIC)
 
